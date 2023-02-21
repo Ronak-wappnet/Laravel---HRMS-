@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+			crossorigin="anonymous" />
+		<link rel="stylesheet" href="style.css" />
+		<title>bootstrap Demo</title>
+	</head>
+	<body>
+		<!---NAVBAR --->
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid ">                
+              <a class="navbar-brand" href="#">WappnetSystem</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>             
+            </div>
+            <div class="float-end col-4">  
+            <div class="collapse navbar-collapse " id="navbarNavDarkDropdown" >
+                <ul class="navbar-nav">
+                  <li class="nav-item dropdown">
+                    <a class="navbar-brand" href="#">Home</a>
+                    <a class="navbar-brand" href="#">Technologies</a>
+                    <a class="navbar-brand" href="#">carear</a>
+                    <a class="navbar-brand" href="#">About us</a>                    
+                  </li>
+                </ul>
+              </div>
+              </div>
+          </nav>         
+		
+		
+			<div class="container-fluid">
+				<div class="row">
+					<!-------------------------- CAROUSEL -------------------------------->
+					<div class="col container-fluid justify-content-center">						
+						<div
+							id="carouselExampleIndicators"
+							class="carousel slide"
+							data-bs-ride="carousel">
+							<div class="carousel-indicators">
+								<button
+									type="button"
+									data-bs-target="#carouselExampleIndicators"
+									data-bs-slide-to="0"
+									class="active"
+									aria-current="true"
+									aria-label="Slide 1"></button>
+								<button
+									type="button"
+									data-bs-target="#carouselExampleIndicators"
+									data-bs-slide-to="1"
+									aria-label="Slide 2"></button>
+								<button
+									type="button"
+									data-bs-target="#carouselExampleIndicators"
+									data-bs-slide-to="2"
+									aria-label="Slide 3"></button>
+							</div>
+							<div class="carousel-inner">
+								<div class="carousel-item active">
+									<img
+										src="https://picsum.photos/1368/526?good"
+										class="d-block w-100"
+										alt="..." />
+								</div>
+								<div class="carousel-item">
+									<img
+										src="https://picsum.photos/1368/526?hello"
+										class="d-block w-100"
+										alt="..." />
+								</div>
+								<div class="carousel-item">
+									<img
+										src="https://picsum.photos/1368/526?nature"
+										class="d-block w-100"
+										alt="..." />
+								</div>
+							</div>
+							<button
+								class="carousel-control-prev"
+								type="button"
+								data-bs-target="#carouselExampleIndicators"
+								data-bs-slide="prev">
+								<span
+									class="carousel-control-prev-icon"
+									aria-hidden="true"></span>
+								<span class="visually-hidden">Previous</span>
+							</button>
+							<button
+								class="carousel-control-next"
+								type="button"
+								data-bs-target="#carouselExampleIndicators"
+								data-bs-slide="next">
+								<span
+									class="carousel-control-next-icon"
+									aria-hidden="true"></span>
+								<span class="visually-hidden">Next</span>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<!--------------------------------- SECTION/ ARTICLE ---------------------------------->
+				<div class="row">
+                    <div class="col-4">
+                      <div id="list-example" class="list-group">
+                        <a class="list-group-item list-group-item-action" href="#list-item-1">Route</a>
+                        <a class="list-group-item list-group-item-action" href="#list-item-2">Controllers</a>
+                        <a class="list-group-item list-group-item-action" href="#list-item-3">Middleware</a>
+                        <a class="list-group-item list-group-item-action" href="#list-item-4">Model</a>
+                      </div>
+                    </div>
+                    <div class="col-8">
+                      <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
+                        <h4 id="list-item-1">Route</h4>
+                        <p><p>The most basic Laravel routes accept a URI and a closure, 
+                            providing a very simple and expressive method of defining routes and behavior without 
+                            complicated routing configuration files:</p>
+                        <p>
+                            All Laravel routes are defined in your route files, which are located in the routes directory.
+                            These files are automatically loaded by your application's App\Providers\RouteServiceProvider.
+                            The routes/web.php file defines routes that are for your web interface. These routes are assigned
+                            the web middleware group, which provides features like session state and CSRF protection. 
+                            The routes in routes/api.php are stateless and are assigned the api middleware group.
+                            For most applications, you will begin by defining routes in your routes/web.php file. 
+                            The routes defined in routes/web.php may be accessed by entering the defined route's URL in your 
+                            browser. For example, you may access the following route by navigating to http://example.com/user in your browser:
+                        </p></p>
+                        <h4 id="list-item-2">Controllers</h4>
+                        <p> <p> Controllers are meant to group associated request handling logic within a single class. 
+                            In your Laravel project, they are stored in the app/Http/Controllers directory. 
+                            The full form of MVC is Model View Controller, which directs traffic among the Views and the Models.
+                            If you think of each Eloquent model in your application as a "resource", it is typical to 
+                            perform the same sets of actions against each resource in your application. For example, 
+                            imagine your application contains a Photo model and a Movie model. It is likely that users 
+                            can create, read, update, or delete these resources.
+                            Because of this common use case, Laravel resource routing assigns the typical create, 
+                            read, update, and delete ("CRUD") routes to a controller with a single line of code. To get 
+                            started, we can use the make:controller Artisan command's --resource option to quickly create
+                            a controller to handle these actions:
+                            </p></p>
+                        <h4 id="list-item-3">Middleware</h4>
+                        <p> <p>
+                            Middleware provide a convenient mechanism for inspecting and filtering HTTP requests entering 
+                            your application. For example, Laravel includes a middleware that verifies the user of your 
+                            application is authenticated. If the user is not authenticated, the middleware will redirect
+                            the user to your application's login screen. However, if the user is authenticated, 
+                            the middleware will allow the request to proceed further into the application.
+                            Additional middleware can be written to perform a variety of tasks besides authentication.
+                            For example, a logging middleware might log all incoming requests to your application. 
+                            There are several middleware included in the Laravel framework, including middleware for 
+                            authentication and CSRF protection. All of these middleware are located in the app/Http/Middleware 
+                            directory.</p></p>
+                        <h4 id="list-item-4">Model</h4>
+                        <p><p>Laravel Create Model is an MVC based PHP system. In the MVC architecture,
+                            'M' stands for 'Model'. A model is used as a way for questioning data to and from the table within the database. 
+                            Laravel gives a basic way to do that using Eloquent ORM where each table incorporates a Model to 
+                            interact with it</p></p>
+                      </div>
+                    </div>
+                  </div>              
+		<!--------------------------------- FOOTER ---------------------------------->
+		<div class="container-fluid bg-danger">
+			<footer class="card-footer">
+				<div class="col-sm text-center">
+					<h4 class="text-center" style="color: #f5ecf1">
+						© Wappnet system pvt.ltd.
+        			</h4>
+				</div>
+			</footer>
+		</div>
+        <script
+        src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+        <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous">
+        </script>
+		
+		
+	</body>
+</html>
